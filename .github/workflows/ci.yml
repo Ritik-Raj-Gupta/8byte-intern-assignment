@@ -11,4 +11,10 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/8byte-intern-assignment:$(date +%s)
+
+    - name: Push the Docker image to Docker Hub
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/8byte-intern-assignment:$(date +%s)
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
