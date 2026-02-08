@@ -4,8 +4,8 @@
 **Issue**  
 During Docker image builds, `npm install` failed with the error:
 
-
 Tracker "idealTree" already exists
+![npm idealtree error](./screenshots/npm_error.png)
 
 
 **Cause**  
@@ -23,6 +23,7 @@ This resolved the npm installation issue and stabilized Docker builds.
 ## 2. GitHub Actions – Image Tag Mismatch
 **Issue**  
 The CI pipeline failed while pushing images to Docker Hub due to mismatched tags between the `docker build` and `docker push` steps.
+![npm idealtree error](./screenshots/tag_mismatch_error.png)
 
 **Cause**  
 Dynamic tags were generated at build time but not reused consistently during the push step.
