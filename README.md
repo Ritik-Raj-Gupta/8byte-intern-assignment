@@ -18,9 +18,9 @@ The application is containerized using Docker and deployed on an EC2 instance pr
 - **GitHub Repository**: https://github.com/Ritik-Raj-Gupta/8byte-intern-assignment
 
 ---
-arch diag
+Architecture Diagram
 
-```
+![Architecture diagram](./screenshots/architecture_diagram.png)
 
 ---
 
